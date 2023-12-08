@@ -6,7 +6,7 @@ The project took house sale data from a database hosted by Spiced Academy. This 
 
 The PostgreSQL database was inspected using DBeaver and the dataset extracted using sqlalchemy.
 
-The dataset for the house_client.ipynb notebook is stored in the `data.zip` folder. To unzip the data folder directly in the terminal run
+The dataset for the house_client.ipynb notebook is stored in the `data.zip` file. To unzip the data folder directly in the terminal run
 
 ```sh
 unzip data.zip

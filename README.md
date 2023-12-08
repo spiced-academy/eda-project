@@ -1,61 +1,40 @@
-# ds-project-template
+# EDA Project
 
-Template for creating ds simple projects
+The project took house sale data from a database hosted by Spiced Academy. This was our first individual project during their 3 month Data Science Bootcamp. The assignment.md outlines the task and the deliverables. I chose the client Erin Robinson, a buyer who wishes to invest in poor neighborhoods, involved in buying & selling but in a socially responsible manner in that she wishes to recoup her costs and make a little profit.
+
+## Data
+
+The PostgreSQL database was inspected using DBeaver and the dataset extracted using sqlalchemy.
+
+The dataset for the house_client.ipynb notebook is stored in the `data.zip` folder. To unzip the data folder directly in the terminal run
+
+```sh
+unzip data.zip
+```
+
+## Presentation
+
+To update the presentation run
+
+```sh
+jupyter nbconvert house_client.ipynb --to slides
+```
 
 ## Requirements
 
 - pyenv
 - python==3.11.3
 
-## Setup
-
-One of the first steps when starting any data science project is to create a virtual environment. For this project you have to create this environment from scratch yourself. However, you should be already familiar with the commands you will need to do so. The general workflow consists of... 
-
-* setting the python version locally to 3.11.3
-* creating a virtual environment using the `venv` module
-* activating your newly created environment 
-* upgrading `pip` (This step is not absolutely necessary, but will save you trouble when installing some packages.)
-* installing the required packages via `pip`
-
-At the end, you want to make sure that people who are interested in your project can create an identical environment on their own computer in order to be able to run your code without running into errors. Therefore you can create a `requirements file` and add it to your repository. You can create such a file by running the following command: 
-
-```bash
-pip freeze > requirements.txt
-```
-
-*Note: In rare case such a requirements file created with `pip freeze` might not ensure that another (especially M1 chip) user can install and execute it properly. This can happen if libraries need to be compiled (e.g. SciPy). Then it also depends on environment variables and the actual system libraries.*
-
-### Unit testing (Optional)
-
-If you write python scripts for your data processing methods, you can also write unit tests. In order to run the tests execute in terminal:
-
-```bash
-pytest
-```
-
-This command will execute all the functions in your project that start with the word **test**.
-
 ## Set up your Environment
-This repo contains a requirements.txt file with a list of all the packages and dependencies you will need.
 
-Before you can start with plotly in Jupyter Lab you have to install node.js (if you haven't done it before).
-- Check **Node version**  by run the following commands:
-    ```sh
-    node -v
-    ```
-    If you haven't installed it yet, begin at `step_1`. Otherwise, proceed to `step_2`.
+Please make sure you have forked the repo and set up a new virtual environment. For this purpose you can use the following commands:
 
+The added [requirements file](requirements.txt) contains all libraries and dependencies we need to execute the contained notebooks.
 
 ### **`macOS`** type the following commands : 
 
 
-- `Step_1:` Update Homebrew and install Node by following commands:
-    ```sh
-    brew update
-    brew install node
-    ```
-
-- `Step_2:` Install the virtual environment and the required packages by following commands:
+- Install the virtual environment and the required packages by following commands:
 
     ```BASH
     pyenv local 3.11.3
@@ -66,14 +45,7 @@ Before you can start with plotly in Jupyter Lab you have to install node.js (if 
     ```
 ### **`WindowsOS`** type the following commands :
 
-
-- `Step_1:` Update Chocolatey and install Node by following commands:
-    ```sh
-    choco upgrade chocolatey
-    choco install nodejs
-    ```
-
-- `Step_2:` Install the virtual environment and the required packages by following commands.
+- Install the virtual environment and the required packages by following commands.
 
    For `PowerShell` CLI :
 
@@ -84,19 +56,18 @@ Before you can start with plotly in Jupyter Lab you have to install node.js (if 
     pip install -r requirements.txt
     ```
 
-    For `Git-Bash` CLI :
+    For `BASH` CLI :
     ```
     python -m venv .venv
     source .venv/Scripts/activate
     pip install --upgrade pip
     pip install -r requirements.txt
     ```
- 
 
- **`Note:`**
+    **`Note:`**
     If you encounter an error when trying to run `pip install --upgrade pip`, try using the following command:
 
-   ```Bash
-   python.exe -m pip install --upgrade pip
-   ```
+    ```Bash
+    python.exe -m pip install --upgrade pip
+    ```
 

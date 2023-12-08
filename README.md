@@ -27,8 +27,6 @@ jupyter nbconvert house_client.ipynb --to slides
 
 ## Set up your Environment
 
-Please make sure you have forked the repo and set up a new virtual environment. For this purpose you can use the following commands:
-
 The added [requirements file](requirements.txt) contains all libraries and dependencies we need to execute the contained notebooks.
 
 ### **`macOS`** type the following commands : 
